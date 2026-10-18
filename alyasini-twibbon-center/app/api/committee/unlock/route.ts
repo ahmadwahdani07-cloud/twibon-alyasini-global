@@ -29,8 +29,8 @@ export async function POST(req: NextRequest) {
     if (submittedHash !== setting.code_hash) return NextResponse.json({ error: 'Kode akses salah.' }, { status: 401 });
 
     // For private assets, image_url stores the object path, not a public URL.
-    const objectPath = item.image_url.replace(/^.*\/storage\/v1\/object\/(?:public|sign)\/twibbons-panitia\//, '');
-    if (!objectPath || objectPath === item.image_url || objectPath.includes('..')) {
+    const objectPath = item.image_url.startsWith('http') ? item.image_url.replace(/^.*\/storage\/v1\/object\/(?:public|sign)\/twibbons-panitia\//, '') : item.image_url;
+    if (!objectPath || objectPath.includes('..') || objectPath.startsWith('/')) {
       return NextResponse.json({ error: 'Lokasi file panitia tidak valid. Admin perlu mengunggah ulang bingkai.' }, { status: 500 });
     }
     const { data: signed, error: signError } = await db.storage.from('twibbons-panitia').createSignedUrl(objectPath, 600);
