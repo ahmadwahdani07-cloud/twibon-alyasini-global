@@ -161,3 +161,14 @@ th{background:#f8faf7;color:#627168}
  .santri-head{min-height:98px}
  .santri-launcher-mascot{width:104px;height:116px}
 }
+
+
+/* Original mascot floats as a character, not a profile avatar */
+@keyframes santri-float{0%,100%{translate:0 0}50%{translate:0 -7px}}
+.santri-launcher-mascot{animation:santri-float 3.2s ease-in-out infinite;transform:translateX(-50%);transform-origin:center bottom}
+.santri-avatar img{animation:santri-float 3.6s ease-in-out infinite;object-fit:contain;object-position:center bottom}
+.santri-launcher{border-radius:0;background:transparent;border:0;box-shadow:none}
+.santri-launcher:hover{transform:none;background:transparent;box-shadow:none}
+.santri-launcher.is-open{background:linear-gradient(145deg,#0b7559,#064b3a);border:3px solid #fff;border-radius:50%;width:60px;height:60px;box-shadow:0 8px 28px #073e2e35}
+.santri-launcher.is-open .santri-launcher-x{color:#fff}
+@media(prefers-reduced-motion:reduce){.santri-launcher-mascot,.santri-avatar img{animation:none}}
