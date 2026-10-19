@@ -153,13 +153,13 @@ th{background:#f8faf7;color:#627168}
 .santri-head-copy{align-self:center}
 .santri-launcher{overflow:visible;background:transparent;border:0;box-shadow:none}
 .santri-launcher:hover{background:transparent;box-shadow:none}
-.santri-launcher-mascot{position:absolute;width:112px;height:124px;max-width:none;object-fit:contain;object-position:center bottom;bottom:0;left:50%;transform:translateX(-50%);filter:drop-shadow(0 7px 6px #062d2038);pointer-events:none}
+.santri-launcher-mascot{position:absolute;width:170px;height:190px;max-width:none;object-fit:contain;object-position:center bottom;bottom:0;left:50%;transform:translateX(-50%);filter:drop-shadow(0 7px 6px #062d2038);pointer-events:none}
 .santri-online-dot{z-index:2;right:0;bottom:3px}
 @media(max-width:560px){
  .santri-avatar{width:66px;height:92px}
  .santri-avatar img{width:86px;height:106px}
  .santri-head{min-height:98px}
- .santri-launcher-mascot{width:104px;height:116px}
+ .santri-launcher-mascot{width:150px;height:170px}
 }
 
 
