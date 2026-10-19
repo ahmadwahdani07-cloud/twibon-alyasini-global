@@ -500,45 +500,46 @@ th{background:#f8faf7;color:#627168}
 }
 
 
-/* Spatial 3D Galaxy Explorer — retains Al-Yasini green, gold and cream palette */
-.galaxy-shell{border:1px solid #dce7dc;border-radius:24px;overflow:hidden;background:#fdfefb;box-shadow:0 18px 50px #103d3110}
-.galaxy-toolbar,.galaxy-footer{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 17px;color:var(--green);font-size:11px;font-weight:800;letter-spacing:1.2px}
-.galaxy-toolbar{border-bottom:1px solid #e5ece4;background:linear-gradient(90deg,#fff,#f5f8f1)}
-.galaxy-toolbar>div{display:flex;align-items:center;gap:9px;letter-spacing:0;color:#617168}
-.galaxy-toolbar small{font-weight:600;letter-spacing:0;color:#78867c}
-.galaxy-live-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#0b7559;margin-right:7px;box-shadow:0 0 0 4px #0b755918}
-.galaxy-zoom,.galaxy-reset{padding:5px 10px;border-radius:8px;font-size:15px;min-width:29px;background:#eaf2e9;color:var(--green);box-shadow:none}
-.galaxy-reset{font-size:11px;background:var(--green);color:white}
-.galaxy-stage{height:570px;position:relative;overflow:hidden;isolation:isolate;touch-action:pan-y;background:radial-gradient(ellipse at 50% 48%,#e6eee0 0%,#f1f4e9 38%,#e4ece2 72%,#dce8dd 100%);cursor:grab}
-.galaxy-stage:before{content:"";position:absolute;inset:0;opacity:.42;background-image:radial-gradient(#0b7559 1px,transparent 1px),radial-gradient(#d4af62 1px,transparent 1px);background-size:43px 43px,71px 71px;background-position:0 0,17px 24px;mask-image:radial-gradient(ellipse at center,#000,transparent 85%)}
-.galaxy-stage.is-dragging{cursor:grabbing}
-.galaxy-nebula{position:absolute;width:75%;height:75%;left:12%;top:12%;border-radius:50%;background:radial-gradient(ellipse,#d4af6230,transparent 62%),radial-gradient(ellipse at 65% 42%,#0b755916,transparent 57%);filter:blur(8px)}
-.galaxy-orbit{position:absolute;left:50%;top:49%;border:1px solid #0b75591c;border-radius:50%;transform:translate(-50%,-50%) rotate(-18deg);pointer-events:none}
-.orbit-one{width:280px;height:180px}.orbit-two{width:490px;height:320px;transform:translate(-50%,-50%) rotate(27deg);border-color:#d4af6260}.orbit-three{width:720px;height:455px;transform:translate(-50%,-50%) rotate(-9deg)}
-.galaxy-core{position:absolute;left:50%;top:49%;transform:translate(-50%,-50%);width:104px;height:104px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;color:#fff;background:radial-gradient(circle at 35% 28%,#25866b,#075c46 65%,#063b2e);border:2px solid #d4af62;box-shadow:0 0 0 10px #d4af621a,0 0 48px #075c4628;pointer-events:none}
-.galaxy-core span{font-size:29px;color:var(--gold);line-height:1}.galaxy-core small{font-size:8px;font-weight:800;letter-spacing:1.5px}
-.galaxy-world{position:absolute;inset:0;transform-origin:center;transition:transform .18s ease-out}
-.galaxy-planet{position:absolute;transform:translate(-50%,-50%);display:block;border-radius:50%;color:var(--green);z-index:2;animation:planet-float 5s ease-in-out infinite;outline:none}
-.galaxy-planet:focus-visible{outline:3px solid var(--gold);outline-offset:5px}
-.planet-halo{position:absolute;inset:-8px;border:1px solid #d4af6280;border-radius:50%;opacity:.7;transition:inset .25s,opacity .25s}
-.planet-image{position:absolute;inset:0;overflow:hidden;border-radius:50%;display:grid;place-items:center;border:3px solid #fff;background:linear-gradient(145deg,#0b7559,#064b3a);box-shadow:0 8px 25px #064b3a2c,0 0 0 1px #d4af62a0}
-.planet-image:after{content:"";position:absolute;inset:0;background:linear-gradient(145deg,#ffffff20,transparent 50%,#052d2226);pointer-events:none}
-.planet-image img{width:100%;height:100%;object-fit:cover}
-.planet-image b{font-size:27px;color:var(--gold);text-shadow:0 2px 10px #0003}
-.planet-featured .planet-image{box-shadow:0 0 0 4px #d4af6233,0 12px 35px #064b3a35}
-.planet-label{position:absolute;top:calc(100% + 13px);left:50%;transform:translateX(-50%);max-width:160px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;text-align:center;background:#fffefaeb;border:1px solid #dce7dc;border-radius:20px;padding:5px 10px;font-size:10px;font-weight:800;box-shadow:0 4px 12px #103d3110}
-.planet-preview{position:absolute;z-index:8;left:50%;bottom:calc(100% + 17px);transform:translate(-50%,8px);width:180px;padding:12px 14px;border:1px solid #d4af62;border-radius:13px;background:#fffef9;box-shadow:0 12px 35px #103d3125;opacity:0;visibility:hidden;transition:opacity .2s,transform .2s;pointer-events:none;text-align:center;white-space:normal}
-.planet-preview:after{content:"";position:absolute;left:calc(50% - 6px);bottom:-6px;width:10px;height:10px;transform:rotate(45deg);background:#fffef9;border-right:1px solid #d4af62;border-bottom:1px solid #d4af62}
-.planet-preview strong,.planet-preview small,.planet-preview>span{display:block}
-.planet-preview strong{font-size:12px;line-height:1.35;margin-bottom:5px}
-.planet-preview small{font-size:10px;color:#738177;margin-bottom:8px}
-.planet-preview>span{font-size:10px;font-weight:800;color:var(--green)}
-.galaxy-planet:hover,.galaxy-planet:focus-visible{z-index:12;animation-play-state:paused}
-.galaxy-planet:hover .planet-halo,.galaxy-planet:focus-visible .planet-halo{inset:-14px;opacity:1;box-shadow:0 0 18px #d4af6250}
-.galaxy-planet:hover .planet-preview,.galaxy-planet:focus-visible .planet-preview{opacity:1;visibility:visible;transform:translate(-50%,0)}
-.galaxy-footer{border-top:1px solid #e5ece4;background:#fffefb;color:#718075;letter-spacing:.1px;font-weight:600}
-.galaxy-footer span:first-child{color:var(--green);font-weight:800}
-.galaxy-hint{position:absolute;bottom:15px;left:50%;transform:translateX(-50%);white-space:nowrap;padding:8px 12px;border:1px solid #dce7dc;border-radius:20px;background:#ffffffd9;color:#5b6e60;font-size:10px;box-shadow:0 4px 12px #103d3108;pointer-events:none}
-@keyframes planet-float{0%,100%{margin-top:0}50%{margin-top:-7px}}
-@media(max-width:600px){.galaxy-stage{height:500px}.galaxy-toolbar,.galaxy-footer{padding:12px;font-size:9px}.galaxy-toolbar>div{gap:5px}.galaxy-zoom{padding:5px 8px}.galaxy-reset{padding:6px 8px}.galaxy-core{width:76px;height:76px}.galaxy-core span{font-size:23px}.galaxy-core small{font-size:7px}.orbit-one{width:190px;height:130px}.orbit-two{width:340px;height:240px}.orbit-three{width:500px;height:350px}.planet-label{font-size:9px;max-width:105px;padding:4px 7px}.planet-preview{width:145px;padding:10px}.galaxy-hint{font-size:9px;max-width:94%;overflow:hidden;text-overflow:ellipsis}}
-@media(prefers-reduced-motion:reduce){.galaxy-planet{animation:none}}
+
+
+/* Tactile Physics Cards — Al-Yasini green and gold palette */
+.tactile-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px;perspective:1400px}
+.tactile-card{height:440px;min-width:0;perspective:1200px;outline:none;transition:transform .22s,filter .22s;cursor:grab}
+.tactile-card:hover{transform:translateY(-5px) rotate(.25deg)}
+.tactile-card.is-being-dragged{opacity:.58;transform:rotate(3deg) scale(.96);cursor:grabbing}
+.tactile-card-inner{height:100%;width:100%;position:relative;transform-style:preserve-3d;transition:transform .65s cubic-bezier(.2,.75,.2,1)}
+.tactile-card.is-flipped .tactile-card-inner{transform:rotateY(180deg)}
+.tactile-face{position:absolute;inset:0;overflow:hidden;border-radius:20px;border:1px solid #e0e8df;background:#fff;box-shadow:0 8px 25px #103d3110,0 2px 5px #103d3108;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.tactile-front{display:flex;flex-direction:column}
+.tactile-poster{height:265px;position:relative;display:grid;place-items:center;overflow:hidden;background:linear-gradient(145deg,#eef3e9,#dfe9dd)}
+.tactile-poster:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,#063b2e55);pointer-events:none}
+.tactile-poster img{width:100%;height:100%;object-fit:contain;transition:transform .4s cubic-bezier(.2,.7,.2,1)}
+.tactile-card:hover .tactile-poster img{transform:scale(1.035)}
+.tactile-category{position:absolute;left:13px;bottom:13px;z-index:1;max-width:calc(100% - 26px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;border:1px solid #ffffff9c;border-radius:20px;background:#fffef0e8;color:#075c46;padding:6px 10px;font-size:10px;font-weight:800}
+.tactile-lock{display:grid;place-items:center;gap:8px;font-size:38px;color:var(--green)}.tactile-lock small{font-size:11px;font-weight:800}
+.tactile-body{padding:17px;display:flex;flex:1;flex-direction:column;min-height:0}
+.tactile-body h3{font-family:Manrope,sans-serif;font-size:16px;line-height:1.35;margin:0 0 7px;overflow-wrap:anywhere}
+.tactile-body p{margin-bottom:0}
+.tactile-actions{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:13px}
+.tactile-actions button{padding:9px 11px;border-radius:10px;min-height:36px}
+.tactile-icon{background:#f6f5ed;color:var(--green);border:1px solid #e7e4d4;font-size:19px;min-width:40px}
+.tactile-icon:hover{background:#f8ebce;color:#075c46}
+.tactile-info{flex:1;font-size:11px;white-space:nowrap}
+.tactile-dismiss{background:#f4f6f2;color:#69766d;border:1px solid #e4e9e2;font-size:20px;min-width:36px}
+.tactile-dismiss:hover{background:#fbe9e5;color:#8c352b}
+.tactile-back{transform:rotateY(180deg);padding:23px;display:flex;flex-direction:column;background:radial-gradient(circle at 100% 0%,#d4af6223,transparent 40%),linear-gradient(145deg,#fffef8,#f1f5ec);border-color:#d4af6280}
+.tactile-back-kicker{font-size:10px;font-weight:800;letter-spacing:2px;color:#9a7a31}
+.tactile-back h3{font-family:Manrope,sans-serif;font-size:21px;line-height:1.3;color:var(--green);margin:12px 0 18px;overflow-wrap:anywhere}
+.tactile-stat{display:flex;align-items:baseline;gap:9px;padding:13px 15px;background:#075c46;border-radius:14px;color:#fff;margin-bottom:18px}
+.tactile-stat strong{font-size:27px;color:var(--gold)}.tactile-stat span{font-size:12px;color:#e3eee6}
+.tactile-back p{font-size:12px;line-height:1.65;color:#647168;margin:0 0 13px;overflow-wrap:anywhere}
+.tactile-back p b{font-size:10px;text-transform:uppercase;letter-spacing:.7px;color:var(--green)}
+.tactile-back-actions{display:flex;gap:8px;margin-top:auto}.tactile-back-actions>*{flex:1;min-width:0;font-size:11px;padding:10px 8px;white-space:normal;text-align:center}
+.favorite-dropzone{display:flex;align-items:center;gap:14px;margin-top:26px;padding:18px 20px;border:1.5px dashed #c5d4c5;border-radius:18px;background:#f7f8f1;color:var(--green);transition:background .2s,border-color .2s,transform .2s}
+.favorite-dropzone>span:first-child{display:grid;place-items:center;width:45px;height:45px;flex-shrink:0;border-radius:14px;background:#075c46;color:#d4af62;font-size:27px}
+.favorite-dropzone div{display:grid;gap:4px;flex:1}.favorite-dropzone strong{font-size:14px}.favorite-dropzone small{font-size:11px;color:#748177}
+.favorite-count{font-size:11px;font-weight:800;white-space:nowrap;background:#e8efe4;padding:8px 10px;border-radius:20px}
+.favorite-dropzone.drop-ready{background:#edf5e7;border-color:#d4af62;border-style:solid;transform:scale(1.01);box-shadow:0 8px 24px #075c4610}
+@media(max-width:850px){.tactile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px}.tactile-card{height:420px}.tactile-poster{height:245px}}
+@media(max-width:560px){.tactile-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.tactile-card{height:365px}.tactile-face{border-radius:15px}.tactile-poster{height:190px}.tactile-body{padding:11px}.tactile-body h3{font-size:13px}.tactile-body .small{font-size:10px}.tactile-actions{gap:5px;padding-top:9px}.tactile-actions button{padding:7px 6px;min-height:32px}.tactile-icon{min-width:31px;font-size:16px}.tactile-info{font-size:10px}.tactile-dismiss{min-width:29px;font-size:17px}.tactile-back{padding:13px}.tactile-back h3{font-size:15px;margin:9px 0 12px}.tactile-stat{padding:9px;margin-bottom:11px}.tactile-stat strong{font-size:20px}.tactile-back p{font-size:10px;margin-bottom:9px}.tactile-back-actions{gap:5px}.tactile-back-actions>*{font-size:10px;padding:8px 5px}.favorite-dropzone{padding:12px;gap:9px}.favorite-dropzone>span:first-child{width:35px;height:35px;font-size:21px}.favorite-dropzone strong{font-size:12px}.favorite-dropzone small{font-size:10px;line-height:1.4}.favorite-count{font-size:10px;padding:6px 7px}}
+@media(prefers-reduced-motion:reduce){.tactile-card-inner,.tactile-card,.tactile-poster img{transition:none}}
