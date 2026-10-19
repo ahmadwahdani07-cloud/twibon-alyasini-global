@@ -144,3 +144,20 @@ th{background:#f8faf7;color:#627168}
 .santri-launcher{overflow:visible}
 .santri-launcher-mascot{position:absolute;width:84px;height:84px;max-width:none;object-fit:contain;object-position:center bottom;bottom:-3px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 4px 4px #062d2025);pointer-events:none}
 @media(max-width:560px){.santri-launcher-mascot{width:76px;height:76px}}
+
+
+/* Floating full-body mascot: remove avatar/photo-profile framing */
+.santri-avatar{width:76px;height:100px;flex:none;border:0;background:transparent;border-radius:0;overflow:visible;display:flex;align-items:flex-end;justify-content:center}
+.santri-avatar img{width:96px;height:116px;max-width:none;object-fit:contain;object-position:center bottom;filter:drop-shadow(0 4px 5px #032d201f)}
+.santri-head{min-height:106px;align-items:center;overflow:visible}
+.santri-head-copy{align-self:center}
+.santri-launcher{overflow:visible;background:transparent;border:0;box-shadow:none}
+.santri-launcher:hover{background:transparent;box-shadow:none}
+.santri-launcher-mascot{position:absolute;width:112px;height:124px;max-width:none;object-fit:contain;object-position:center bottom;bottom:0;left:50%;transform:translateX(-50%);filter:drop-shadow(0 7px 6px #062d2038);pointer-events:none}
+.santri-online-dot{z-index:2;right:0;bottom:3px}
+@media(max-width:560px){
+ .santri-avatar{width:66px;height:92px}
+ .santri-avatar img{width:86px;height:106px}
+ .santri-head{min-height:98px}
+ .santri-launcher-mascot{width:104px;height:116px}
+}
