@@ -411,3 +411,90 @@ th{background:#f8faf7;color:#627168}
  #galeri .card,#galeri .thumb img{transition:none}
  #galeri .card:hover,#galeri .card:hover .thumb img{transform:none}
 }
+
+
+/* Digital Campaign card direction — poster-first, scoped to public twibbon gallery */
+#galeri .card{
+ border:1px solid #d9e8df;
+ background:linear-gradient(155deg,#ffffff 0%,#f6faf6 58%,#edf5ef 100%);
+ box-shadow:0 9px 26px #063f2c12, inset 0 1px 0 #ffffff;
+}
+#galeri .card:before{
+ content:"";position:absolute;inset:0 0 auto;height:3px;z-index:4;
+ background:linear-gradient(90deg,#075c46 0%,#21a078 48%,#d4af62 100%);
+ pointer-events:none;
+}
+#galeri .card:hover{
+ border-color:#a8cdb8;
+ box-shadow:0 22px 46px #063f2c20,0 0 0 1px #ffffff;
+}
+#galeri .card>a{background:#e8f0e8}
+#galeri .thumb{
+ aspect-ratio:4/3;
+ padding:20px;
+ background:
+  radial-gradient(ellipse at 50% 42%,#ffffff 0%,#f8fbf7 38%,transparent 72%),
+  linear-gradient(135deg,#e6efe7 0%,#f5f4e9 48%,#dcebe1 100%);
+}
+#galeri .thumb:before{
+ inset:11px;border:1px solid #ffffffd9;border-radius:13px;
+ box-shadow:inset 0 0 0 1px #0b75590a;
+}
+#galeri .thumb:after{
+ content:"✦  AL-YASINI MEDIA";
+ left:22px;top:22px;color:#075c46;font-size:8px;
+ letter-spacing:1.1px;font-weight:800;opacity:.82;
+}
+#galeri .thumb img{
+ filter:drop-shadow(0 9px 12px #073e2b25);
+}
+#galeri .card:hover .thumb img{
+ transform:scale(1.045);
+ filter:drop-shadow(0 13px 15px #073e2b30);
+}
+#galeri .card-body{
+ position:relative;padding:18px 18px 17px;
+ background:linear-gradient(180deg,#ffffff 0%,#f9fcf8 100%);
+}
+#galeri .card-body .tag{
+ border:1px solid #cce5d4;
+ background:linear-gradient(100deg,#e9f6ed,#f4f8ed);
+ color:#075c46;
+ box-shadow:0 2px 6px #075c4608;
+}
+#galeri .card-body h3{
+ color:#173c2e;font-size:17px;letter-spacing:-.35px;
+}
+#galeri .card-body .muted{color:#718178}
+#galeri .card-body>.button{
+ position:relative;overflow:hidden;
+ background:linear-gradient(105deg,#075c46 0%,#0b7559 72%,#118363 100%);
+ box-shadow:0 7px 16px #075c4620;
+}
+#galeri .card-body>.button:after{
+ content:"";position:absolute;inset:0;
+ background:linear-gradient(110deg,transparent 25%,#ffffff20 48%,transparent 70%);
+ transform:translateX(-120%);transition:transform .45s ease;pointer-events:none;
+}
+#galeri .card-body>.button:hover:after{transform:translateX(120%)}
+@media(max-width:850px){
+ #galeri .thumb{padding:15px}
+ #galeri .thumb:before{inset:9px}
+ #galeri .thumb:after{left:17px;top:18px;font-size:7px}
+ #galeri .card-body{padding:15px}
+}
+@media(max-width:560px){
+ #galeri .grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #galeri .card{border-radius:15px}
+ #galeri .thumb{aspect-ratio:4/3;padding:10px}
+ #galeri .thumb:before{inset:6px;border-radius:8px}
+ #galeri .thumb:after{left:11px;top:12px;font-size:5.5px;letter-spacing:.55px}
+ #galeri .card-body{padding:11px 10px 12px}
+ #galeri .card-body .tag{font-size:7.5px;padding:5px 6px;margin-bottom:8px;letter-spacing:0}
+ #galeri .card-body h3{font-size:12.5px;line-height:1.35;letter-spacing:-.2px}
+ #galeri .card-body .muted{font-size:9.5px}
+ #galeri .card-body>.button{font-size:10px;padding:10px 6px;min-height:38px;margin-top:11px}
+}
+@media(prefers-reduced-motion:reduce){
+ #galeri .card-body>.button:after{transition:none}
+}
