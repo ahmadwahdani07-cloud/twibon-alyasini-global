@@ -137,3 +137,10 @@ th{background:#f8faf7;color:#627168}
 .santri-back:hover{background:transparent;color:#075c46;box-shadow:none;transform:none}
 @media(max-width:560px){.santri-assistant{right:14px;bottom:15px}.santri-launcher{width:60px;height:60px}.santri-panel{bottom:73px;right:-2px;width:min(360px,calc(100vw - 24px));border-radius:19px}.santri-content{padding:13px;max-height:calc(100dvh - 125px)}.santri-hint{right:68px;bottom:14px;font-size:11px;padding:8px 10px}}
 @media(prefers-reduced-motion:reduce){.santri-panel{animation:none}.santri-launcher{transition:none}}
+
+
+.santri-avatar{overflow:hidden}
+.santri-avatar img{width:100%;height:100%;object-fit:cover;object-position:center top}
+.santri-launcher{overflow:visible}
+.santri-launcher-mascot{position:absolute;width:84px;height:84px;max-width:none;object-fit:contain;object-position:center bottom;bottom:-3px;left:50%;transform:translateX(-50%);filter:drop-shadow(0 4px 4px #062d2025);pointer-events:none}
+@media(max-width:560px){.santri-launcher-mascot{width:76px;height:76px}}
