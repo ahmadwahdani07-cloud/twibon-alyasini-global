@@ -261,3 +261,11 @@ th{background:#f8faf7;color:#627168}
  .hero-chip-top{top:13px;right:0}
  .hero-chip-bottom{bottom:9px;left:0}
 }
+
+
+/* Correct hero treatment: the mascot itself is the star-shaped visual */
+.hero-big-star,.hero-star-glow{display:none!important}
+.hero-mascot-stage{overflow:visible}
+.hero-mascot{width:min(100%,350px);height:350px;object-fit:contain;object-position:center bottom;clip-path:polygon(50% 0%,61% 17%,80% 8%,79% 29%,100% 36%,84% 51%,94% 72%,71% 73%,63% 96%,49% 80%,31% 100%,28% 77%,6% 82%,17% 60%,0% 45%,22% 35%,19% 15%,39% 21%);filter:drop-shadow(0 14px 16px #00251b35)}
+@media(max-width:850px){.hero-mascot{width:270px;height:280px}}
+@media(max-width:560px){.hero-mascot{width:245px;height:250px}}
