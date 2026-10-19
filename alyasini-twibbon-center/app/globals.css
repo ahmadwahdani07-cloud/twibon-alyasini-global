@@ -239,3 +239,25 @@ th{background:#f8faf7;color:#627168}
  .thumb{height:clamp(130px,38vw,175px)}
 }
 @media(prefers-reduced-motion:reduce){.hero-mascot,.hero-float-chip{animation:none}}
+
+
+/* Hero mascot centered within a large star ornament */
+.hero-mascot-stage{height:350px;width:min(100%,380px);overflow:hidden}
+.hero-big-star{position:absolute;z-index:0;left:50%;top:48%;translate:-50% -50%;font-size:350px;line-height:1;color:#d4af62;opacity:.22;text-shadow:0 0 28px #d4af6245;filter:drop-shadow(0 12px 24px #001f1820);pointer-events:none}
+.hero-star-glow{position:absolute;z-index:0;left:50%;top:47%;translate:-50% -50%;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,#f8d98b5c 0%,#d4af621c 48%,transparent 72%);pointer-events:none}
+.hero-mascot{z-index:1;width:300px;height:300px;object-fit:contain;object-position:center bottom;align-self:end;margin:0 auto -1px;filter:drop-shadow(0 12px 13px #00251b35)}
+.hero-float-chip{z-index:3}
+@media(max-width:850px){
+ .hero-mascot-stage{height:285px}
+ .hero-big-star{font-size:290px}
+ .hero-star-glow{width:190px;height:190px}
+ .hero-mascot{width:255px;height:260px}
+}
+@media(max-width:560px){
+ .hero-mascot-stage{height:255px;max-width:340px;margin:0 auto}
+ .hero-big-star{font-size:270px;top:48%}
+ .hero-star-glow{width:175px;height:175px}
+ .hero-mascot{width:235px;height:245px}
+ .hero-chip-top{top:13px;right:0}
+ .hero-chip-bottom{bottom:9px;left:0}
+}
