@@ -13,7 +13,8 @@ export async function POST(req: NextRequest) {
 
     const url = process.env.NEXT_PUBLIC_SUPABASE_URL;
     const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-    if (!url || !serviceKey) return NextResponse.json({ error: 'Konfigurasi server belum lengkap. Hubungi admin.' }, { status: 503 });
+    const missing = [!url ? 'NEXT_PUBLIC_SUPABASE_URL' : '', !serviceKey ? 'SUPABASE_SERVICE_ROLE_KEY' : ''].filter(Boolean);
+    if (missing.length) return NextResponse.json({ error: `Konfigurasi server belum lengkap: ${missing.join(' dan ')} belum diatur di Vercel Environment Variables.` }, { status: 503 });
     const db = createClient(url, serviceKey, { auth: { persistSession: false } });
 
     const { data: item, error: itemError } = await db.from('twibbons')
