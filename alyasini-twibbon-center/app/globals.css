@@ -294,3 +294,59 @@ th{background:#f8faf7;color:#627168}
 .hero-brand-logo{display:block;width:min(72%,300px);height:auto;max-height:260px;object-fit:contain;object-position:center;margin:auto;filter:none;clip-path:none!important;transform:none!important;animation:none!important}
 @media(max-width:850px){.hero-brand-logo{width:min(72%,250px);max-height:220px}}
 @media(max-width:560px){.hero-brand-logo{width:min(76%,220px);max-height:200px}}
+
+
+/* Campaign Hub visual refresh — Phase 1 */
+.hero{
+  background:
+    radial-gradient(ellipse at 78% 48%,rgba(212,175,98,.16),transparent 33%),
+    linear-gradient(122deg,#062f27 0%,#075340 48%,#0b7054 100%);
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 28px 70px rgba(3,52,38,.20);
+}
+.hero:before{right:-95px;bottom:-285px;width:470px;height:470px;border-color:#ffffff1c;box-shadow:0 0 0 34px #ffffff07,0 0 0 72px #ffffff05,0 0 0 112px #ffffff03}
+.hero:after{right:13%;top:-175px;width:300px;height:300px;background:radial-gradient(circle,#d4af6218,transparent 68%)}
+.hero-brand-logo{width:min(70%,250px);max-height:190px;position:relative;z-index:2}
+.hero-mascot-stage{width:100%;height:330px;min-height:0;position:relative;overflow:visible;display:grid;place-items:center;isolation:isolate}
+.hero-brand-card{position:relative;z-index:2;width:min(100%,310px);min-height:260px;padding:24px 22px 20px;border-radius:25px;border:1px solid #ffffff35;background:linear-gradient(145deg,#ffffff20,#ffffff08);box-shadow:0 24px 55px #002a1d35,inset 0 1px 0 #ffffff30;backdrop-filter:blur(8px);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transform:rotate(1.5deg);animation:brand-card-float 5.5s ease-in-out infinite}
+.hero-brand-kicker{font-size:9px;font-weight:800;letter-spacing:2px;color:#e9d29b;text-align:center}
+.hero-brand-caption{display:flex;align-items:center;justify-content:center;gap:7px;color:#f5f7ed;font-size:9px;font-weight:800;letter-spacing:1.3px;white-space:nowrap}
+.hero-brand-live-dot{width:6px;height:6px;border-radius:50%;background:#e2c16e;box-shadow:0 0 0 4px #e2c16e20}
+.hero-brand-divider{opacity:.45}
+.hero-brand-orbit{position:absolute;z-index:0;left:50%;top:50%;border:1px solid #ffffff20;border-radius:50%;pointer-events:none}
+.hero-brand-orbit-one{width:285px;height:285px;transform:translate(-50%,-50%) rotate(-24deg) scaleY(.55)}
+.hero-brand-orbit-two{width:330px;height:330px;transform:translate(-50%,-50%) rotate(24deg) scaleY(.55);border-style:dashed;border-color:#d4af624c}
+.hero-brand-glow{position:absolute;z-index:0;left:50%;top:50%;width:220px;height:220px;border-radius:50%;transform:translate(-50%,-50%);background:radial-gradient(circle,#d4af6230,transparent 70%);filter:blur(2px)}
+.hero-brand-float{position:absolute;z-index:3;display:inline-flex;align-items:center;padding:10px 13px;border:1px solid #ffffff30;border-radius:12px;background:#f9f8ef;color:#15503c;font-size:10px;font-weight:800;box-shadow:0 12px 28px #002a1d30;white-space:nowrap}
+.hero-brand-float-top{top:25px;right:-1px;transform:rotate(3deg)}
+.hero-brand-float-bottom{bottom:20px;left:-8px;transform:rotate(-3deg)}
+.section-head h2{letter-spacing:-1.5px}
+.card{box-shadow:0 10px 30px #102d1b0a}
+.card:hover{transform:translateY(-6px);box-shadow:0 20px 42px #102d1b14}
+@keyframes brand-card-float{0%,100%{translate:0 0;rotate:1.5deg}50%{translate:0 -7px;rotate:0deg}}
+@media(max-width:850px){
+ .hero{grid-template-columns:1fr .82fr;padding:38px 27px;gap:10px}
+ .hero-mascot-stage{height:285px}
+ .hero-brand-card{min-height:230px;padding:20px 14px;gap:15px}
+ .hero-brand-logo{width:min(75%,220px);max-height:155px}
+ .hero-brand-orbit-one{width:230px;height:230px}
+ .hero-brand-orbit-two{width:270px;height:270px}
+ .hero-brand-float{font-size:9px;padding:9px 10px}
+ .hero-brand-float-top{right:-4px;top:16px}
+ .hero-brand-float-bottom{left:-3px;bottom:14px}
+}
+@media(max-width:560px){
+ .hero{grid-template-columns:1fr;padding:30px 22px 22px}
+ .hero-art{display:flex;min-height:235px;margin-top:12px}
+ .hero-mascot-stage{height:245px;max-width:100%;margin:0 auto}
+ .hero-brand-card{width:min(82%,280px);min-height:205px;padding:17px 12px;gap:12px;border-radius:20px}
+ .hero-brand-logo{width:min(72%,190px);max-height:130px}
+ .hero-brand-kicker{font-size:8px;letter-spacing:1.5px}
+ .hero-brand-caption{font-size:8px;letter-spacing:.7px;gap:5px}
+ .hero-brand-orbit-one{width:205px;height:205px}
+ .hero-brand-orbit-two{width:235px;height:235px}
+ .hero-brand-glow{width:165px;height:165px}
+ .hero-brand-float-top{top:8px;right:0}
+ .hero-brand-float-bottom{bottom:5px;left:0}
+}
+@media(prefers-reduced-motion:reduce){.hero-brand-card{animation:none}}
