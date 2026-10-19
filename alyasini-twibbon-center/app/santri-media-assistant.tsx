@@ -16,7 +16,7 @@ export function SantriMediaAssistant(){
  return <div className="santri-assistant">
    {open&&<section className="santri-panel" aria-label="Panduan Santri Media">
     <header className="santri-head">
-      <div className="santri-avatar" aria-hidden="true"><span>🧑🏻‍🎓</span></div>
+      <div className="santri-avatar" aria-hidden="true"><img src="/santri-media.png" alt="" /></div>
       <div className="santri-head-copy"><strong>Santri Media</strong><small>Asisten panduan Al-Yasini</small></div>
       <button className="santri-close" onClick={()=>{setOpen(false);setSelected('')}} aria-label="Tutup bantuan">×</button>
     </header>
@@ -36,7 +36,7 @@ export function SantriMediaAssistant(){
     </div>
    </section>}
    <button className={'santri-launcher '+(open?'is-open':'')} onClick={()=>setOpen(v=>!v)} aria-label={open?'Tutup Santri Media':'Buka bantuan Santri Media'} aria-expanded={open}>
-     {open?<span className="santri-launcher-x">×</span>:<><span className="santri-launcher-face">🧑🏻‍🎓</span><span className="santri-online-dot"/></>}
+     {open?<span className="santri-launcher-x">×</span>:<><img className="santri-launcher-mascot" src="/santri-media.png" alt="" /><span className="santri-online-dot"/></>}
    </button>
    {!open&&<span className="santri-hint">Butuh bantuan?</span>}
  </div>
