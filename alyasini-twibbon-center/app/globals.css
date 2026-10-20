@@ -13,8 +13,12 @@ button.gold,.button.gold{background:var(--gold);color:#203229;box-shadow:0 8px 2
 button.gold:hover,.button.gold:hover{background:#e0bf77}
 .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
 .nav{height:86px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--green);letter-spacing:-.4px}
-.brand img{width:130px;height:auto;object-fit:contain}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;color:var(--green);letter-spacing:-.4px;min-width:0}
+.brand img{width:44px;height:44px;object-fit:contain;flex:none}
+.brand-copy{display:grid;gap:3px;line-height:1.1}
+.brand-copy strong{font-family:Manrope,sans-serif;font-size:12px;letter-spacing:1.05px}
+.brand-copy small{font-size:9px;letter-spacing:1.7px;color:var(--muted);font-weight:800}
+.navlinks .button{box-shadow:0 5px 14px #075c461c}
 .navlinks{display:flex;gap:25px;align-items:center;color:#43534b;font-weight:600;font-size:14px}
 .navlinks>a:not(.button){transition:color .2s}
 .navlinks>a:not(.button):hover{color:var(--green)}
@@ -97,7 +101,7 @@ th{background:#f8faf7;color:#627168}
 .loginbox .panel{padding:30px}
 .mobilemenu{display:none}
 @media(max-width:850px){.hero{padding:42px 30px;grid-template-columns:1fr;min-height:0}.hero-art{display:none}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.adminlayout{grid-template-columns:1fr}.sidebar{display:flex;gap:6px;overflow:auto}.sidebar a{white-space:nowrap}.previewbox{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.navlinks{gap:12px}.brand img{width:105px}}
-@media(max-width:560px){.wrap{width:calc(100% - 26px)}.nav{height:72px}.navlinks a:not(.button){display:none}.navlinks .button{font-size:12px;padding:10px 12px}.hero{border-radius:22px;padding:34px 23px;min-height:0}.hero h1{font-size:clamp(36px,10vw,43px);letter-spacing:-1.8px}.hero p{font-size:14px;line-height:1.75}.hero .row{align-items:stretch}.hero .row .button{font-size:13px;padding:12px 13px}.section{padding:42px 0}.section-head{align-items:start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.thumb{height:clamp(130px,38vw,175px)}.card{border-radius:15px}.card-body{padding:12px}.card-body h3{font-size:13px;line-height:1.35}.card-body .tag{font-size:9px;padding:5px 7px}.card-actions{flex-direction:column}.card-actions button{padding:10px;font-size:12px}.card-body>.button{font-size:11px;padding:10px 8px;white-space:normal;line-height:1.25}.formgrid{grid-template-columns:1fr}.formfield.full{grid-column:auto}.stats{grid-template-columns:1fr 1fr}.footer-inner{align-items:flex-start;flex-direction:column}.page-title h1{font-size:31px}.panel{padding:17px}.brand img{width:88px}.searchrow .field{min-width:0}.searchrow select.field{max-width:130px!important}.chips{gap:6px}.chip{padding:8px 12px;font-size:12px}}
+@media(max-width:560px){.wrap{width:calc(100% - 26px)}.nav{height:72px}.brand-copy strong{font-size:10px;letter-spacing:.7px}.brand-copy small{font-size:8px;letter-spacing:1.2px}.navlinks a:not(.button){display:none}.navlinks .button{font-size:12px;padding:10px 12px}.hero{border-radius:22px;padding:34px 23px;min-height:0}.hero h1{font-size:clamp(36px,10vw,43px);letter-spacing:-1.8px}.hero p{font-size:14px;line-height:1.75}.hero .row{align-items:stretch}.hero .row .button{font-size:13px;padding:12px 13px}.section{padding:42px 0}.section-head{align-items:start;flex-direction:column}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.thumb{height:clamp(130px,38vw,175px)}.card{border-radius:15px}.card-body{padding:12px}.card-body h3{font-size:13px;line-height:1.35}.card-body .tag{font-size:9px;padding:5px 7px}.card-actions{flex-direction:column}.card-actions button{padding:10px;font-size:12px}.card-body>.button{font-size:11px;padding:10px 8px;white-space:normal;line-height:1.25}.formgrid{grid-template-columns:1fr}.formfield.full{grid-column:auto}.stats{grid-template-columns:1fr 1fr}.footer-inner{align-items:flex-start;flex-direction:column}.page-title h1{font-size:31px}.panel{padding:17px}.brand img{width:88px}.searchrow .field{min-width:0}.searchrow select.field{max-width:130px!important}.chips{gap:6px}.chip{padding:8px 12px;font-size:12px}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
 
 
