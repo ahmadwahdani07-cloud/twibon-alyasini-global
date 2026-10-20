@@ -2,7 +2,7 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
-export function Header(){return <header className="wrap nav"><Link href="/" className="brand"><img src="/logo-alyasini-media.png" alt="Al-Yasini Media" style={{display:"block",width:42,height:42,objectFit:"contain"}} /></Link><nav className="navlinks"><Link href="/">Beranda</Link><Link href="/#galeri">Galeri</Link><Link href="/tentang">Tentang</Link><Link href="/login" className="button">Portal Admin ↗</Link></nav></header>}
+export function Header(){return <header className="wrap nav"><Link href="/" className="brand"><img src="/logo-alyasini-media.png" alt="Logo Al-Yasini Media" style={{display:"block",width:44,height:44,objectFit:"contain"}} /><span className="brand-copy"><strong>AL-YASINI MEDIA</strong><small>TWIBBON CENTER</small></span></Link><nav className="navlinks"><Link href="/">Beranda</Link><Link href="/#galeri">Galeri</Link><Link href="/tentang">Tentang</Link><Link href="/login" className="button">Portal Admin ↗</Link></nav></header>}
 export function Footer(){return <footer className="footer"><div className="wrap footer-inner"><div><strong>Al-Yasini Twibbon Center</strong><p className="small">Pusat twibbon resmi Pondok Pesantren Terpadu Al-Yasini.</p></div><small>© {new Date().getFullYear()} ALYASINI MEDIA</small></div></footer>}
 export function SetupNotice(){return !isSupabaseConfigured ? <div className="notice"><strong>Setup diperlukan:</strong> hubungkan project Supabase melalui Environment Variables di Vercel dan jalankan SQL setup yang ada di folder <code>supabase</code>. Website belum terhubung ke database.</div>:null}
 export function Gallery(){
